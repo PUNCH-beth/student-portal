@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Student Information Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mmust University</h1>
+        <h2>Student Information Portal</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#registration">Student Registration</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About the Portal</h2>
+        <p>The Student Information Portal serves as a centralized digital platform designed to help students access academic records, manage course enrollments, track academic progress, and stay updated with official university announcements.</p>
+    </section>
+
+    <section id="programmes">
+        <h3>Academic Programmes Offered</h3>
+        <ul>
+            <li>Bachelor of Science in Computer Science</li>
+            <li>Bachelor of Information Technology</li>
+            <li>Bachelor of Software Engineering</li>
+            <li>Bachelor of Business Administration</li>
+        </ul>
+    </section>
+
+    <section id="student-table">
+        <h3>Registered Students</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Registration Number</th>
+                    <th>Programme</th>
+                    <th>Year of Study</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>STU-001</td>
+                    <td>Dorothy Otieno</td>
+                    <td>com/b/01-00205/2025</td>
+                    <td>Bachelor of Science in Computer Science</td>
+                    <td>Year 2</td>
+                </tr>
+                <tr>
+                    <td>STU-002</td>
+                    <td>Beth Fiona</td>
+                    <td>com/b/01-00169/2025</td>
+                    <td>Bachelor of Science in Computer Science</td>
+                    <td>Year 2</td>
+                </tr>
+                <tr>
+                    <td>STU-003</td>
+                    <td>Austine Bosire</td>
+                    <td>com/b/01-00204/2025</td>
+                    <td>Bachelor of Science in Computer Science</td>
+                    <td>Year 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="registration">
+        <h2>Student Registration Form</h2>
+
+        <form id="studentForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="regnumber">Registration Number:</label>
+                <input type="text" id="regnumber" name="regnumber" placeholder="e.g., 2024/BIT/012" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="student@university.ac.ug" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                    
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="programme">Academic Programme:</label>
+                <select id="programme" name="programme" required>
+                    <option value="" disabled selected>-- Select Programme --</option>
+                    <option value="bsc_cs">Bachelor of Science in Computer Science</option>
+                    <option value="bit">Bachelor of Information Technology</option>
+                    <option value="bse">Bachelor of Software Engineering</option>
+                    <option value="bba">Bachelor of Business Administration</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+
+        <div id="outputMessage" style="margin-top: 20px; font-weight: bold;"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
